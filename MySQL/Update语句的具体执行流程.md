@@ -14,4 +14,4 @@
 - 会将更新后的数据记录写入到 Redo Log Buffer，写入成功后会进行事务的准备提交操作 -> 将 Redo Log 日志写出磁盘，这里涉及到两阶段提交（Redo Log and Binary Log）。
 - 当 Redo Log 成功写入到磁盘文件里的 Redo Log 文件里后，执行器会将数据写入到 Bin Log 日志里，进行事务准备提交工作，然后修改 RedoLog 日志的 prepare 标识为 commit 则代表事务提交成功。
 ## 流程图：
-![img.png](img.png)
+![img.png](../assets/MySQL/Update语句的具体执行流程1.png)
